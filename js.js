@@ -1,16 +1,16 @@
-fetch('https://api.frankfurter.app/latest?from=RON')
-    .then((response) => {
-        return response.json();
-    })
-    .then((data) => {
-        console.log(data);
-        let currentExchangeRate = data;
+const url = 'https://api.frankfurter.app/latest?from=RON';
+async function fetchCurrencyData(url) {
+    const response = await fetch(url);
+    let body = await response.json();
 
-        currentExchangeRate.map(function (currencyName) {
-            const info = document.getElementById('table-body');
-            const tr = document.createElement('tr');
-            const td = document.createElement('td');
-            rates.innerHTML = `${currencyName.rates}`;
-            tr.appendChild(rates);
-        });
-    });
+    const rates = body.rates;
+    console.log(rates);
+    addRatesToPage(rates);
+}
+fetchCurrencyData(url);
+
+function addRatesToPage(rates) {
+    const tableBodytContainer = document.getElementById('tablebody');
+    const tableData = document.createElement('td');
+    tableBodytContainer.appendChild(tableData);
+}
