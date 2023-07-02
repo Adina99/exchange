@@ -20,9 +20,6 @@ async function fetchCurrencyData(url) {
         tableBody.appendChild(createTr);
     });
 
-    /*const table = document.getElementById('tablebody');
-    const tableRows = table.children;
-    console.log(tableRows);*/
     for (i = 0; i < arrayRates.length * 2; i++) {
         if (i % 2 == 0) {
             let td1 = document.querySelectorAll('td')[i];
@@ -35,9 +32,3 @@ async function fetchCurrencyData(url) {
     }
 }
 fetchCurrencyData(url);
-
-/*function addRatesToPage(rates) {
-    const tableBodytContainer = document.getElementById('tablebody');
-    const tableData = document.createElement('td');
-    tableBodytContainer.appendChild(tableData);
-}*/
