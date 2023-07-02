@@ -4,23 +4,20 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Document</title>
-        <link rel="stylesheets" src="styles.css" />
+        <link rel="stylesheet" href="styles.css" />
         <script async src="js.js"></script>
     </head>
     <body>
         <div id="current-exchange-rate">
-            <h2>Cursul valutar actual</h2>
+            <h2 id="current-exchange-rate-title">Cursul valutar actual in functie de RON</h2>
             <table id="current-exchange-rate-table">
-                <tr>
-                    <th>Moneda</th>
-                    <th>Astazi</th>
-                </tr>
-                <tbody id="tablebody">
-                    <tr class="tr">
-                        <td class="currency"></td>
-                        <td class="number"></td>
+                <thead id="current-exchange-rate-tablehead">
+                    <tr>
+                        <th>MONEDA</th>
+                        <th>VALOARE</th>
                     </tr>
-                </tbody>
+                </thead>
+                <tbody id="current-exchange-rate-tablebody"></tbody>
             </table>
         </div>
     </body>
